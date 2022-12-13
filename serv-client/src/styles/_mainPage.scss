@@ -1,0 +1,14 @@
+.main_page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h2{
+        font-size: 2rem;
+        border: 2px solid #fd0;
+        padding: 8px 0;
+        max-width: 40%;
+        margin: 50px auto;
+        cursor: pointer;
+    }
+}

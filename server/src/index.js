@@ -1,6 +1,7 @@
 import express from "express"
 import ufcFigthersRoutes from "./routes/ufcFigthersRoutes.js";
 import { LocalStorage } from "node-localstorage";
+import cors from 'cors';
 // importind data_base
 import DATA from "../DB/db.js";
 
@@ -17,6 +18,8 @@ export const ls = new LocalStorage('../DB');
 // MIDDLEWARE PARA PODER LEER EL BODY DE LAS REQUEST
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+// setting cors
+app.use(cors());
 
 
 
