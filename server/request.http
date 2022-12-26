@@ -1,22 +1,82 @@
+#UFC
 GET  http://localhost:3500/api/ufc/fighters
 Content-Type: application/json
 
 
 ###
-POST http://localhost:3500/api/ufc/fighters/Lightweight
+POST http://localhost:3500/api/ufc/fighters/lightweight
+Content-Type: application/json
+
+{
+    "id":"7",
+    "rank":2,
+    "weight":"155 lbs",
+    "name":"Dustin Poirirer",
+    "nick":"The Diamond",
+    "age":33,
+    "record":"29-7-0",
+    "country":"EUA"
+}
+
+###
+PUT  http://localhost:3500/api/ufc/fighters/middleweight/1234
+Content-Type: application/json
+
+{
+    "id":"9876",
+    "rank":2,
+    "weight":"185 lbs",
+    "name":"Robert Whittaker",
+    "nick":"The Reaper",
+    "age":31,
+    "record":"25-6-0",
+    "country":"Austria"
+}
+
+
+###
+DELETE  http://localhost:3500/api/ufc/fighters/lightweight/7
+Content-Type: application/json
+
+
+
+# BOXERS
+###
+GET http://localhost:3500/api/box/fighters
 Content-Type: application/json
 
 ###
-PUT  http://localhost:3500/api/ufc/fighters/185/123
+POST  http://localhost:3500/api/box/fighters/lightweight
 Content-Type: application/json
+
+{
+"id": "00192849-asdad-14184174asd-asd1-asd4ads-1984719",
+"rank": "champ",
+"weight": "135 lbs",
+"name": "Devon Haney",
+"nick": "The Dream",
+"age": 22,
+"record": "24-0-0",
+"country": "USA"
+}
+
+###
+PUT  http://localhost:3500/api/box/fighters/lightweight/00192849-asdad-14184174asd-asd1-asd4ads-1984719
+Content-Type: application/json
+
+{
+"id": "00192849-asdad-14184174asd-asd1-asd4ads-1984719",
+"rank": "multi-champ",
+"weight": "135 lbs",
+"name": "Devin Haney",
+"nick": "The Dream",
+"age": 22,
+"record": "24-0-0",
+"country": "USA"
+}
 
 
 ###
-DELETE  http://localhost:3500/api/ufc/fighters/185/77
+DELETE  http://localhost:3500/api/box/fighters/lightweight/00192849-asdad-14184174asd-asd1-asd4ads-1984719
 Content-Type: application/json
-
-
-
-
-
 

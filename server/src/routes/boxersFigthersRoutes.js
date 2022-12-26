@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import { getAllBoxers, getSingleBoxer, getSingleDivision } from '../controllers/boxersControllers.js';
+import { deleteBoxer, getAllBoxers, getSingleBoxer, getSingleDivision, postBoxer, putBoxer } from '../controllers/boxersControllers.js';
 
 // 
 const router = Router();
@@ -8,9 +8,10 @@ const router = Router();
 router.get('/', getAllBoxers)
 router.get('/:division', getSingleDivision)
 router.get('/:division/:id', getSingleBoxer)
-// router.post('/')
-// router.put('/')
-// router.delete('/')
+
+router.post('/:division', postBoxer)
+router.put('/:division/:id', putBoxer)
+router.delete('/:division/:id', deleteBoxer)
 
 
 export default router;

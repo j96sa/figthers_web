@@ -248,13 +248,217 @@ export default {
                     'rank':'2',
                     'weight':'55kg',
                     'name':'Nonito Donaire',
-                    'nick':'Deus da Guerra',
+                    'nick':'The Filipino Flash',
                     'age':40,
                     'record':'42-7-0',
                     'country':'Filipines'
                 }
             ]
         },
+
+        {
+            'division':'light-middleweight',
+            'fighters':[
+                {
+                    'id':uuid(),
+                    'rank':'1',
+                    'weight':'154 lbs',
+                    'name':'Jermell Charlo',
+                    'nick':'Iron Man',
+                    'age':31,
+                    'record':'33-1-0',
+                    'country':'United States'
+                },
+       
+                {
+                    'id':uuid(),
+                    'rank':'3',
+                    'weight':'154 lbs',
+                    'name':'Erislandy Lara',
+                    'nick':'The American Dream',
+                    'age':37,
+                    'record':'27-3-3',
+                    'country':'Cuba'
+                },
+            ]
+        },
+       
+        {
+            'division':'light-heavyweight',
+            'fighters':[
+                {
+                    'id':uuid(),
+                    'rank':'1',
+                    'weight':'175 lbs',
+                    'name':'Artur Beterbiev',
+                    'nick':'The Boa Constrictor',
+                    'age':35,
+                    'record':'15-0-0',
+                    'country':'Russia'
+                },
+       
+                {
+                    'id':uuid(),
+                    'rank':'2',
+                    'weight':'175 lbs',
+                    'name':'Dmitry Bivol',
+                    'nick':'The White Wolf',
+                    'age':29,
+                    'record':'17-0-0',
+                    'country':'Russia'
+                }
+            ]
+        },
+
+        {
+            'division':'lightweight',
+            'fighters':[
+                {
+                    'id':uuid(),
+                    'rank':'1',
+                    'weight':'135 lbs',
+                    'name':'Teofimo Lopez',
+                    'nick':'The Takeover',
+                    'age':24,
+                    'record':'16-0-0',
+                    'country':'United States'
+                },
+       
+                {
+                    'id':uuid(),
+                    'rank':'2',
+                    'weight':'135 lbs',
+                    'name':'Vasyl Lomachenko',
+                    'nick':'Hi-Tech',
+                    'age':33,
+                    'record':'14-2-0',
+                    'country':'Ukraine'
+                },
+       
+                {
+                    'id':uuid(),
+                    'rank':'3',
+                    'weight':'135 lbs',
+                    'name':'Ryan Garcia',
+                    'nick':'Kingry',
+                    'age':23,
+                    'record':'21-0-0',
+                    'country':'United States'
+                },
+       
+                {
+                    'id':uuid(),
+                    'rank':'4',
+                    'weight':'135 lbs',
+                    'name':'Gervonta Davis',
+                    'nick':'Tank',
+                    'age':26,
+                    'record':'24-0-0',
+                    'country':'United States'
+                }
+            ]
+        },
+
+        {
+            'division':'heavyweight',
+            'fighters':[
+                {
+                    'id':uuid(),
+                    'rank':'1',
+                    'weight':'200+ lbs',
+                    'name':'Tyson Fury',
+                    'nick':'The Gypsy King',
+                    'age':33,
+                    'record':'30-0-1',
+                    'country':'United Kingdom'
+                },
+       
+                {
+                    'id':uuid(),
+                    'rank':'2',
+                    'weight':'200+ lbs',
+                    'name':'Anthony Joshua',
+                    'nick':'AJ',
+                    'age':32,
+                    'record':'24-1-0',
+                    'country':'United Kingdom'
+                },
+       
+                {
+                    'id':uuid(),
+                    'rank':'3',
+                    'weight':'200+ lbs',
+                    'name':'Deontay Wilder',
+                    'nick':'The Bronze Bomber',
+                    'age':36,
+                    'record':'42-1-1',
+                    'country':'United States'
+                },
+       
+                {
+                    'id':uuid(),
+                    'rank':'4',
+                    'weight':'200+ lbs',
+                    'name':'Oleksandr Usyk',
+                    'nick':'The Cat',
+                    'age':33,
+                    'record':'18-0-0',
+                    'country':'Ukraine'
+                }
+            ]
+        },
+       
+        {
+            'division': 'super-middleweight',
+            'fighters': [
+                {
+                    'id': uuid(),
+                    'rank': 1,
+                    'weight': '168 lbs',
+                    'name': 'Canelo Alvarez',
+                    'nick': 'Canelo',
+                    'age': 30,
+                    'record': '55-1-2',
+                    'country': 'Mexico'
+                },
+                {
+                    'id': uuid(),
+                    'rank': 2,
+                    'weight': '168 lbs',
+                    'name': 'Caleb Plant',
+                    'nick': 'Sweethands',
+                    'age': 28,
+                    'record': '21-0',
+                    'country': 'United States'
+                }
+            ]
+        },
+
+        {
+            'division': 'welterweight',
+            'fighters': [
+                {
+                    'id': uuid(),
+                    'rank': 1,
+                    'weight': '147 lbs',
+                    'name': 'Terence Crawford',
+                    'nick': 'Bud',
+                    'age': 33,
+                    'record': '37-0',
+                    'country': 'United States'
+                },
+                {
+                    'id': uuid(),
+                    'rank': 2,
+                    'weight': '147 lbs',
+                    'name': 'Errol Spence Jr.',
+                    'nick': 'The Truth',
+                    'age': 30,
+                    'record': '26-0',
+                    'country': 'United States'
+                }
+            ]
+        }
     ]
 }
 
@@ -262,7 +466,7 @@ export default {
  * 
 
 {
-    "id":7,
+    "id":"1357",
     "rank":2,
     "weight":"155 lbs",
     "name":"Dustin Poirirer",
@@ -273,7 +477,7 @@ export default {
 }
 
 {
-    "id":2,
+    "id":"2468",
     "rank":1,
     "weight":"135 lbs",
     "name":"Sean O'Malley",
@@ -284,7 +488,7 @@ export default {
 }
 
 {
-    "id":123,
+    "id":"123",
     "rank":2,
     "weight":"185 lbs",
     "name":"Robert Whittaker",
@@ -293,4 +497,31 @@ export default {
     "record":"25-6-0",
     "country":"Australia"
 }
+
+{
+            'division':'',
+            'fighters':[
+                {
+                    'id':uuid(),
+                    'rank':'',
+                    'weight':'',
+                    'name':'',
+                    'nick':'',
+                    'age':,
+                    'record':'',
+                    'country':''
+                },
+
+                {
+                    'id':uuid(),
+                    'rank':'',
+                    'weight':'',
+                    'name':'',
+                    'nick':'',
+                    'age':,
+                    'record':'',
+                    'country':''
+                }
+            ]
+        },
  */
