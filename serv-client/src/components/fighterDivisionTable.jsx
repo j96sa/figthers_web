@@ -2,30 +2,23 @@ import React from 'react'
 import {v4 as uuid} from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPencil, faPlus, faRemove } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 export default function FighterDivisionTable({div}) {
-    const {division,  fighters} = div;   
+    const {division,  fighters} = div;  
+    
+    const navigate = useNavigate();
     
     // constante para no crear otro componente externo; asi no creo tantos archivos inescesariametne
     const FighterElement = ({e})=>{
-
-        // const for edit the fighter properties
-        const editFighter = (id)=>{
-            
-        };
-
-        // const for delete the fighter
-        const deleteFighter = (id)=>{
-
-        };
 
         return(
             <>
                 <section className='fighter_options'>
                     <p>{e.name}</p>
                     <div className='buttons'>
-                        <FontAwesomeIcon onClick={()=>editFighter(e.id)} icon={faPencil}/>
-                        <FontAwesomeIcon onClick={()=>deleteFighter(e.id)} icon={faRemove}/>
+                        <FontAwesomeIcon onClick={()=>navigate(`editFighter/${e.id}`)} icon={faPencil}/>
+                        <FontAwesomeIcon onClick={()=>navigate(`removeFighter/${e.id}`)} icon={faRemove}/>
                     </div>
                 </section>
                 <p>{e.nick}</p>
