@@ -8,13 +8,24 @@ export default function FighterDivisionTable({div}) {
     
     // constante para no crear otro componente externo; asi no creo tantos archivos inescesariametne
     const FighterElement = ({e})=>{
+
+        // const for edit the fighter properties
+        const editFighter = (id)=>{
+            
+        };
+
+        // const for delete the fighter
+        const deleteFighter = (id)=>{
+
+        };
+
         return(
             <>
                 <section className='fighter_options'>
                     <p>{e.name}</p>
                     <div className='buttons'>
-                        <FontAwesomeIcon icon={faPencil}/>
-                        <FontAwesomeIcon icon={faRemove}/>
+                        <FontAwesomeIcon onClick={()=>editFighter(e.id)} icon={faPencil}/>
+                        <FontAwesomeIcon onClick={()=>deleteFighter(e.id)} icon={faRemove}/>
                     </div>
                 </section>
                 <p>{e.nick}</p>
