@@ -4,10 +4,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPencil, faPlus, faRemove } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 
-export default function FighterDivisionTable({div}) {
+export default function FighterDivisionTable({div, setData}) {
     const {division,  fighters} = div;  
     
     const navigate = useNavigate();
+
+    // const to delete the fighter
+    const handlerDeleteFighter = (id)=>{
+        fetch(`http://localhost:3500/api/ufc/fighters/${division}/${id}`, {
+            method:'DELETE',
+            headers:{'Content-type':'application/json; charset=UTF-8'}
+        })
+        .then(res => res.json())
+        .then(data => setData(data))
+        .catch(err => console.log(err.message));
+    };
+
     
     // constante para no crear otro componente externo; asi no creo tantos archivos inescesariametne
     const FighterElement = ({e})=>{
@@ -17,8 +29,8 @@ export default function FighterDivisionTable({div}) {
                 <section className='fighter_options'>
                     <p>{e.name}</p>
                     <div className='buttons'>
-                        <FontAwesomeIcon onClick={()=>navigate(`editFighter/${e.id}`)} icon={faPencil}/>
-                        <FontAwesomeIcon onClick={()=>navigate(`removeFighter/${e.id}`)} icon={faRemove}/>
+                        <FontAwesomeIcon onClick={()=>navigate(`editFighter/${division}/${e.id}`)} icon={faPencil}/>
+                        <FontAwesomeIcon onClick={()=>handlerDeleteFighter(e.id)} icon={faRemove}/>
                     </div>
                 </section>
                 <p>{e.nick}</p>
@@ -36,7 +48,7 @@ export default function FighterDivisionTable({div}) {
             <div className='fighter-division'>
                 <section className='division_section'>
                     <h2>Division: {division}</h2>
-                    <FontAwesomeIcon icon={faPlus} />
+                    <FontAwesomeIcon icon={faPlus} onClick={()=>navigate(`postFighter/${division}`)}/>
                 </section>
                 <article className='table'>                    
                     <p className='header_elements'>name</p>

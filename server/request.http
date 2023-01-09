@@ -19,18 +19,18 @@ Content-Type: application/json
 }
 
 ###
-PUT  http://localhost:3500/api/ufc/fighters/middleweight/1234
+PUT  http://localhost:3500/api/ufc/fighters/lightweight/7
 Content-Type: application/json
 
 {
-    "id":"9876",
+    "id":"1234567",
     "rank":2,
-    "weight":"185 lbs",
-    "name":"Robert Whittaker",
-    "nick":"The Reaper",
-    "age":31,
-    "record":"25-6-0",
-    "country":"Austria"
+    "weight":"155 lbs",
+    "name":"Dustin Poirirer",
+    "nick":"The Demon",
+    "age":33,
+    "record":"29-7-0",
+    "country":"EUA"
 }
 
 

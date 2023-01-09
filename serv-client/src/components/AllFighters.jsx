@@ -6,12 +6,11 @@ import {v4 as uuid} from 'uuid'
 
 export default function UFCAllFighters() {
     const location = useLocation();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const params = useParams();
 
     const [data, setData] = useState(undefined);
     const [url, setUrl] = useState(undefined);
-    // const [sportparam, setSportparam] = useState(params.sport)
 
     useEffect(() => {
         const sport = params.sport; 
@@ -26,7 +25,6 @@ export default function UFCAllFighters() {
 
     useEffect(() => {
         const get = async()=>{
-
             const res = await fetch(url).then(res=>res.json());
             setData(res);
         };
@@ -37,7 +35,7 @@ export default function UFCAllFighters() {
         <>
             <h1>ALL FIGHTERS</h1>
             <h1>{location.pathname}</h1>
-            {data ?data.map(div=><FighterDivisionTable key={uuid()} div={div}/>) :<h2>NADA</h2>}
+            {data ?data.map(div=><FighterDivisionTable key={uuid()} setData={setData} div={div}/>) :<h2>NADA</h2>}
         </>
     )
 };

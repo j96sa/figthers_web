@@ -81,7 +81,7 @@ export default {
                     'nick':'The Great',
                     'age':34,
                     'record':'25-1-0',
-                    'country':'Rusia'
+                    'country':'Australia'
                 }
             ]
         },
@@ -496,6 +496,17 @@ export default {
     "age":31,
     "record":"25-6-0",
     "country":"Australia"
+}
+
+{
+    "id":"123",
+    "rank":-,
+    "weight":"155 lbs",
+    "name":"Conor McGregor",
+    "nick":"The Notorius",
+    "age":34,
+    "record":"22-6-0",
+    "country":"Ireland"
 }
 
 {

@@ -8,7 +8,8 @@ export default function Router() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/:sport/fighters/editFighter/:id" element={<FormHandler/>} />
+        <Route path="/:sport/fighters/editFighter/:division/:id" element={<FormHandler/>} />
+        <Route path="/:sport/fighters/postFighter/:division/" element={<FormHandler/>} />
         <Route path="/:sport/fighters" element={<AllFighters/>} />
         <Route path="/" element={<MainPage/>} />
       </Routes>
